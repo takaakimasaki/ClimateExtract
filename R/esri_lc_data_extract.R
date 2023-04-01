@@ -1,9 +1,9 @@
-#' CHIRPS data download.
+#' ESRI landcover data download.
 #' @param year Year.
 #' @param utm_id UTM ID.
 #' @param path path in which downloaded data will be stored.
 #' @export
-#' @return `chirps_data_extract()` download all the GEOTIFF files for the period between year_start and year_end from https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/.
+#' @return `esri_lc_data_extract()` download all the GEOTIFF files for the period between year_start and year_end from https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/.
 #' @examples
 #'\dontrun{
 #' esri_lc_data_extract(year,utm_id,path)
