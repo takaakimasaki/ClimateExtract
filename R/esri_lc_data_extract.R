@@ -6,7 +6,7 @@
 #' @return `esri_lc_data_extract()` download GEOTIFF tile (utm_id) from https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=-121.64%2C39.371%2C11&mode=step&timeExtent=2017%2C2022&year=2022. 
 #' @examples
 #'\dontrun{
-#' path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/chirps"
+#' path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/esri_landcover"
 #' year <- 2017
 #' utm_id <- "36N"
 #' esri_lc_data_extract(year,utm_id,path)
