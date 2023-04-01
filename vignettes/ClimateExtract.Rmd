@@ -50,7 +50,8 @@ ESRI Land Cover Data can be downloaded from https://livingatlas.arcgis.com/landc
 Let's say you want to download ESRI Land Cover TIFF data for Ethiopia. Then you need to download tiles from 36N, 37N, 38N, 36P, 37P, and 38N (refer to https://www.dmap.co.uk/utmworld.htm). 
 
 ```{r}
-utm_id_list <- c("36N","37N","38N","36P","37P", "38N")
+#utm_id_list <- c("36N","37N","38N","36P","37P","38P")
+utm_id_list <- ("38P")
 path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/esri_landcover/ETH"
 for(year in 2017:2022) {
   for(utm_id in utm_id_list) {
