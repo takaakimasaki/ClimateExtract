@@ -2,7 +2,7 @@
 % Please edit documentation in R/esri_lc_data_extract.R
 \name{esri_lc_data_extract}
 \alias{esri_lc_data_extract}
-\title{CHIRPS data download.}
+\title{ESRI landcover data download.}
 \usage{
 esri_lc_data_extract(year, utm_id, path)
 }
@@ -14,13 +14,16 @@ esri_lc_data_extract(year, utm_id, path)
 \item{path}{path in which downloaded data will be stored.}
 }
 \value{
-\code{chirps_data_extract()} download all the GEOTIFF files for the period between year_start and year_end from https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/.
+\code{esri_lc_data_extract()} download GEOTIFF tile (utm_id) from https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=-121.64\%2C39.371\%2C11&mode=step&timeExtent=2017\%2C2022&year=2022.
 }
 \description{
-CHIRPS data download.
+ESRI landcover data download.
 }
 \examples{
 \dontrun{
+path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/esri_landcover"
+year <- 2017
+utm_id <- "36N"
 esri_lc_data_extract(year,utm_id,path)
 }
 }

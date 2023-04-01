@@ -25,6 +25,12 @@ Download WRSI data from https://edcftp.cr.usgs.gov/project/fews/dekadal/.
 }
 \examples{
 \dontrun{
+path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/fews_net/WRSI"
+region <- "africa_west"
+year_start <- 2
+year_end <- 20
+month_start <- 13
+month_end <- 33
 wrsi_data_extract (year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
 }
 }

@@ -29,6 +29,13 @@ GAEZ data download.
 }
 \examples{
 \dontrun{
+path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/crop/gaez/version_4/qga"
+res <- "res05"
+model <- "NorESM1-M"
+rcp <- "rcp8p5"
+time <- "2020sH"
+indicator <- "sxHr0"
+crop <- "whe"
 gaez_data_extract(path, model, rcp, time, indicator, crop)
 }
 }

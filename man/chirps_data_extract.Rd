@@ -21,6 +21,9 @@ CHIRPS data download.
 }
 \examples{
 \dontrun{
+path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/chirps"
+y <- 1981
+m <- "01"
 chirps_data_extract(year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
 }
 }
