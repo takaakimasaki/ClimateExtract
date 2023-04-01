@@ -20,7 +20,7 @@ esri_lc_data_extract <- function(year,utm_id,path){
   #utm_id <- "36N"
   year2 <- year+1
   url <- paste0("https://lulctimeseries.blob.core.windows.net/lulctimeseriespublic/lc",year,"/",utm_id,"_",year,"0101-",year2,"0101.tif")
-  fileName <- gsub(".gz","",basename(url))
+  #fileName <- gsub(".gz","",basename(url))
   #download.file(url_S_C, tmpFile)
   httr::GET(url,httr::write_disk(path=paste0(path,"/",basename(url)), overwrite=TRUE))
   #R.utils::gunzip(paste0(path,"/",basename(url)), overwrite=TRUE)
