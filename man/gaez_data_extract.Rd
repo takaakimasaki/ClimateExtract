@@ -4,9 +4,11 @@
 \alias{gaez_data_extract}
 \title{GAEZ data download.}
 \usage{
-gaez_data_extract(path, model, rcp, time, indicator, crop)
+gaez_data_extract(path, res, model, rcp, time, indicator, crop, water_supply)
 }
 \arguments{
+\item{res}{Resolution.}
+
 \item{model}{Climate model.}
 
 \item{rcp}{RCP.}
@@ -16,6 +18,8 @@ gaez_data_extract(path, model, rcp, time, indicator, crop)
 \item{indicator}{Indicator.}
 
 \item{crop}{Crop.}
+
+\item{water_supply}{water supply.}
 }
 \value{
 \code{download_wrsi()} download all the GEOTIFF files for the period between year_start and year_end from https://edcftp.cr.usgs.gov/project/fews/dekadal.
@@ -25,6 +29,6 @@ GAEZ data download.
 }
 \examples{
 \dontrun{
-download_wrsi(year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
+gaez_data_extract(path, model, rcp, time, indicator, crop)
 }
 }

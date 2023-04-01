@@ -1,0 +1,46 @@
+---
+title: "ClimateExtract"
+output: html_document
+date: "2023-04-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ClimateExtract)
+```
+
+## GAEZ data
+GAEZ data can be downloaded through its API. To run `gaez_data_extract()`, you need to specify the following parameters: resolution (res); climate model (model); RCP (rcp); time period (time period); indicator (indicator); crop (crop). For instance, if you want to download crop production suitability index, you will run the following code: 
+
+```{r}
+path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/crop/gaez/version_4/sxHr0"
+res <- "res05" ##resolution
+model <- "NorESM1-M" ##climate model
+rcp <- "rcp8p5" ##RCP
+time <- "2020sH" ##time period
+indicator <- "sxHr0" ##Suitability Index
+crop <- "whe"
+water_supply <- ""
+crop_list <- c("whe","brl","mze")
+for(c in crop_list) {
+  gaez_data_extract(path, res, model, rcp, time, indicator, crop=c, water_supply)
+}
+
+```
+Here is another example for crop production gap.
+```{r qga}
+res <- "res07" ##resolution
+model <- "" ##climate model
+rcp <- "" ##RCP
+time <- "2010" ##time period
+indicator <- "qga" ##Suitability Index
+crop <- "whe"
+crop_list <- c("whe","brl","mze")
+water_supply <- "T"
+gaez_data_extract(path, res, model, rcp, time, indicator, crop="whe", water_supply)
+gaez_data_extract(path, res, model, rcp, time, indicator, crop="brl", water_supply)
+gaez_data_extract(path, res, model, rcp, time, indicator, crop="mze", water_supply)
+for(c in crop_list) {
+  gaez_data_extract(path, res, model, rcp, time, indicator, crop=c, water_supply)
+}
+```

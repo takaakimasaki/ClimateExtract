@@ -5,10 +5,10 @@
 #' @param month_end end month.
 #' @param path path in which downloaded data will be stored.
 #' @export
-#' @return `download_wrsi()` download all the GEOTIFF files for the period between year_start and year_end from https://edcftp.cr.usgs.gov/project/fews/dekadal.
+#' @return `wrsi_data_extract()` download all the GEOTIFF files for the period between year_start and year_end from https://edcftp.cr.usgs.gov/project/fews/dekadal.
 #' @examples
 #'\dontrun{
-#' download_wrsi(year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
+#' wrsi_data_extract (year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
 #'}
 #' @import dplyr stringr
 #' @importFrom raster raster crop mask writeRaster

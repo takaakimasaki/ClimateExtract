@@ -14,13 +14,13 @@ chirps_data_extract(year_start, year_end, path)
 \item{path}{path in which downloaded data will be stored.}
 }
 \value{
-\code{download_wrsi()} download all the GEOTIFF files for the period between year_start and year_end from https://edcftp.cr.usgs.gov/project/fews/dekadal.
+\code{chirps_data_extract()} download all the GEOTIFF files for the period between year_start and year_end from https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/.
 }
 \description{
 CHIRPS data download.
 }
 \examples{
 \dontrun{
-download_wrsi(year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
+chirps_data_extract(year_start = 20,year_end = 22,month_start=13,month_end=33, region="west_africa", path="./data-clean")
 }
 }
