@@ -3,7 +3,7 @@
 #' @param utm_id UTM ID.
 #' @param path path in which downloaded data will be stored.
 #' @export
-#' @return `esri_lc_data_extract()` download all the GEOTIFF files for the period between year_start and year_end from https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/.
+#' @return `esri_lc_data_extract()` download GEOTIFF tile (utm_id) from https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=-121.64%2C39.371%2C11&mode=step&timeExtent=2017%2C2022&year=2022. 
 #' @examples
 #'\dontrun{
 #' path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/chirps"
