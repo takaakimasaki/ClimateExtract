@@ -17,11 +17,14 @@ path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/crop/gaez/version_
 res <- "res05" ##resolution
 model <- "NorESM1-M" ##climate model
 rcp <- "rcp8p5" ##RCP
-time <- "2020sH" ##time period
+#time <- "2020sH" ##time period ##qga
+time <- 
 indicator <- "sxHr0" ##Suitability Index
+#indicator <- "qga" ##Suitability Index
 crop <- "whe"
 water_supply <- ""
-crop_list <- c("whe","brl","mze")
+#crop_list <- c("whe","brl","mze")
+crop_list <- c("cof")
 for(c in crop_list) {
   gaez_data_extract(path, res, model, rcp, time, indicator, crop=c, water_supply)
 }
@@ -49,7 +52,7 @@ ESRI Land Cover Data can be downloaded from https://livingatlas.arcgis.com/landc
 
 Let's say you want to download ESRI Land Cover TIFF data for Ethiopia. Then you need to download tiles from 36N, 37N, 38N, 36P, 37P, and 38N (refer to https://www.dmap.co.uk/utmworld.htm). 
 
-```{r}
+```{r, eval=FALSE}
 #utm_id_list <- c("36N","37N","38N","36P","37P","38P")
 utm_id_list <- ("38P")
 path <- "C:/Users/WB495141/OneDrive - WBG/poverty/data/global/esri_landcover/ETH"

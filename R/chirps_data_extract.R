@@ -18,7 +18,13 @@
 #' @importFrom R.utils gunzip
 
 chirps_data_extract <- function(year,month,path){
-  url <- paste0("https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/chirps-v2.0.",y,".",m,".tif.gz")
+  if(month<10){
+    month <- paste0("0",month)
+  }
+  if(month>=11){
+    month <- paste0(month)
+  }
+  url <- paste0("https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/chirps-v2.0.",year,".",month,".tif.gz")
   httr::GET(url,httr::write_disk(path=paste0(path,"/",basename(url)), overwrite=TRUE))
   R.utils::gunzip(paste0(path,"/",basename(url)), overwrite=TRUE)
 }
